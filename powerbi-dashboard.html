@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Learning Platform - Dashboard</title>
+    <link rel="stylesheet" href="powerbi-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>📊 Power BI Master Course</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="powerbi-dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="powerbi-course.html" class="nav-link">Course Content</a>
+                <a href="#" id="logoutBtn" class="nav-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-section">
+            <h1>Welcome back, <span id="studentName">Student</span>! 👋</h1>
+            <p>Continue your Power BI learning journey</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-content">
+                    <h3 id="totalLessons">0</h3>
+                    <p>Total Lessons</p>
+                </div>
+            </div>
+
+            <div class="stat-card completed">
+                <div class="stat-icon">✅</div>
+                <div class="stat-content">
+                    <h3 id="completedLessons">0</h3>
+                    <p>Completed</p>
+                </div>
+            </div>
+
+            <div class="stat-card progress">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <h3 id="progressPercentage">0%</h3>
+                    <p>Progress</p>
+                </div>
+            </div>
+
+            <div class="stat-card remaining">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-content">
+                    <h3 id="remainingLessons">0</h3>
+                    <p>Remaining</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h2>Overall Progress</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="overallProgressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-label" id="progressLabel">0% Complete</span>
+            </div>
+        </div>
+
+        <div class="weekly-progress">
+            <h2>Weekly Progress</h2>
+            <div class="weeks-grid" id="weeksGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-list" id="activityList">
+                <p class="no-activity">No recent activity. Start learning now!</p>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <a href="powerbi-course.html" class="btn-primary btn-large">Continue Learning →</a>
+        </div>
+    </div>
+
+    <script src="powerbi-app.js"></script>
+    <script>
+        // Initialize dashboard when page loads
+        window.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+</body>
+</html>
